@@ -1,0 +1,25 @@
+Prerequisites
+Docker installed on your system
+Docker Compose installed
+Installation
+Clone the repository:
+
+git clone https://github.com/arezoomohammadi22/nexus-registry.git
+cd nexus-registry/nexus
+Start the registry service:
+
+edit docker compose before starting:
+image foe ARM:
+  klo2k/nexus3
+image for Intel:
+  sonatype/nexus3
+
+docker-compose up -d
+Usage
+To push an image to your registry:
+
+docker tag [your-image] localhost:5000/[your-image]
+docker push localhost:5000/[your-image]
+To pull an image from your registry:
+
+docker pull localhost:5000/[your-image]
